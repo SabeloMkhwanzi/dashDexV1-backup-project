@@ -1,5 +1,26 @@
-import '../styles/globals.css'
+import { ChakraProvider } from "@chakra-ui/react";
+import { useState } from "react";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+// import react-query
+import { QueryClient, QueryClientProvider } from "react-query";
+
+// Create a client for react-query
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+    },
+  },
+});
+
+function MyApp({ Component, pageProps }) {
+  return (
+    <ChakraProvider>
+      <QueryClientProvider client={queryClient}>
+        <Component {...pageProps} />
+      </QueryClientProvider>
+    </ChakraProvider>
+  );
 }
+
+export default MyApp;

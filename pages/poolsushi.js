@@ -41,8 +41,7 @@ import { FaMoon, FaSun } from "react-icons/fa";
 
 //import { Logo } from "@choc-ui/logo";
 
-import PoolSushi from "../components/Pools/PoolSushi";
-import Footers from "../components/Footer/Footers";
+import { FooterPage, PoolSushi } from "../components";
 
 export default function Swibc() {
   const sidebar = useDisclosure();
@@ -214,7 +213,7 @@ export default function Swibc() {
           <PoolSushi />
         </Box>
       </Box>
-      <Footers />
+      <FooterPage />
     </Box>
   );
 }

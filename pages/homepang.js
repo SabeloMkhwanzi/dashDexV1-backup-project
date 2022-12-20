@@ -37,9 +37,7 @@ import {
   MdOutlineGames,
 } from "react-icons/md";
 import { FaMoon, FaSun } from "react-icons/fa";
-
-import Homepang from "../components/Homepages/homepang";
-import Footer from "../components/Footer/Footers";
+import { FooterPage, HomePang } from "../components";
 
 export default function Swibc() {
   const sidebar = useDisclosure();
@@ -208,10 +206,10 @@ export default function Swibc() {
 
         {/* Content below  */}
         <Box bg={useColorModeValue("white", "gray.900")} as="main" p="4">
-          <Homepang />
+          <HomePang />
         </Box>
       </Box>
-      <Footer />
+      <FooterPage />
     </Box>
   );
 }

@@ -38,11 +38,7 @@ import {
   MdOutlineGames,
 } from "react-icons/md";
 import { FaMoon, FaSun } from "react-icons/fa";
-
-//import { Logo } from "@choc-ui/logo";
-
-import Tokenquick from "../components/Tokens/Tokenquick";
-import Footers from "../components/Footer/Footers";
+import { FooterPage, TokenSushi } from "../components";
 
 export default function Swibc() {
   const sidebar = useDisclosure();
@@ -211,10 +207,10 @@ export default function Swibc() {
 
         {/* Content below  */}
         <Box bg={useColorModeValue("white", "gray.900")} as="main" p="4">
-          <Tokenquick />
+          <TokenSushi />
         </Box>
       </Box>
-      <Footers />
+      <FooterPage />
     </Box>
   );
 }
